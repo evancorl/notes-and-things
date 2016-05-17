@@ -1,8 +1,11 @@
+# Mongo Indexes
+----
+
 Indexes support the efficient execution of queries in MongoDB. 
 
 Collection Scan: scan every document in a collection, to select those documents that match the query statement. If an appropriate index exists for a query, MongoDB can use the index to limit the number of documents it must inspect.
 
-Index Types
+### Index Types
 ----
 * **Single Field Indexes**: Only includes data from a signal field of the document in a collection. MongoDB supports single field indexes on field at the top level of a document _and_ on fields in sub-documents.
 * **Compound Indexes**: Includes more than one field of the documents in a collection.
@@ -12,7 +15,11 @@ each value in the array.
 * **Text Indexes**: Support search of string content in documents.
 * **Hashed Index**: Maintain entries with hashes of the values of the indexed field and are primarily used withsharded clusters to support hashed shard keys.
 
-**Sparse**
+### Index Properties
+----
+* **Unique**
+  * A unique index causes MongoDB to reject all documents that contain a duplicate value for the indexed field.
+* **Sparse**
   * Sparse indexes only contain entries for documents that have the indexed field, even if the index field contains a null value.
   * The index skips over any document that is missing the indexed field. 
 
