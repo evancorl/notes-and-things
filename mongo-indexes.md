@@ -28,8 +28,25 @@ each value in the array.
   * This prevents clients from inserting two documents with the same value for the `_id`.
   * You cannot drop this index
 
-**Create an Index**
-`db.collection.createIndex(<key and index type specifications>, <options>)`
+### Methods
+---
+**Return All Indexes for a Collection**
+  * `db.collection.getIndexes()`
 
-**Meteor Mongo**
-* Minimongo doesn't currently have indexes.
+**Create an Index**
+  * `db.collection.createIndex(<key and index type specifications>, <options>)`
+  * the 1 indicates an ascending sort order and -1 a descending sort order.
+
+**List All Indexes for a Database**
+```
+db.getCollectionNames().forEach(function(collection) {
+  indexes = db[collection].getIndexes();
+  print("Indexes for " + collection + ":");
+  printjson(indexes);
+});
+```
+
+### Meteor Specific
+----
+* **Meteor Mongo**
+  * Minimongo doesn't currently have indexes.
