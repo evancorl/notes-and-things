@@ -1,9 +1,6 @@
-http://guide.meteor.com/collections.html#default-value
-
 # Meteor Collections
-----
 
-Source: [http://guide.meteor.com/collections.html#default-value]
+Source: http://guide.meteor.com/collections.html#default-value
 
 One thing that the Collection2 package does is [“clean” the data](https://github.com/aldeed/meteor-simple-schema#cleaning-data) before sending it to the database. This includes but is not limited to:
 
